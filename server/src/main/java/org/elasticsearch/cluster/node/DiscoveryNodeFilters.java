@@ -88,6 +88,10 @@ public class DiscoveryNodeFilters {
         return false;
     }
 
+    public Map<String, String[]> getFilters() {
+        return filters;
+    }
+
     public boolean match(DiscoveryNode node) {
         for (Map.Entry<String, String[]> entry : filters.entrySet()) {
             String attr = entry.getKey();
